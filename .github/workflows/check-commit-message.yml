@@ -1,0 +1,15 @@
+---
+name: 'Check commit message style'
+on:
+  push:
+
+jobs:
+  check-commit-message-style:
+    name: Check commit message style
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check
+        uses: mristin/opinionated-commit-message@v2.3.0
+        with:
+          enforce-sign-off: 'true'
+          
